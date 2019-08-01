@@ -12,6 +12,9 @@ var job;
 console.log(job);
 
 job = 'Teacher';
-
 console.log(job);
 
+// Variable Naming Rules
+var _3years = 3;
+var johnMark = 'John and Mark';
+var if = 23;
