@@ -165,3 +165,17 @@
 // }
 
 // console.log('Is Marks bmi higher than Johns? ' + (bmiMark > bmiJohn))
+
+// *******************
+// Boolean logic
+
+var firstName = 'john';
+var age = 16;
+
+if (age < 13) {
+    console.log(firstName + ' is a boy.');
+} else if (age > 13 && age < 20) { // between 13 and 20
+    console.log(firstName + ' is a teenager.');
+} else { // 20 or older
+    console.log(firstName + ' is a man.');
+}
