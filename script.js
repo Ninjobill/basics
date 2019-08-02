@@ -194,29 +194,45 @@ var age = 20;
 
 // switch statement
 
-var job = 'instructor';
-switch (job) {
-    case 'teacher':
-    case 'instructor':
-        console.log(firstName + ' teaches kids how to code.');
-        break;
-    case 'driver':
-        console.log(firstName + ' drives an uber in lisbon.');
-        break;
-    case 'designer':
-        console.log(firstName + ' designs beautiful websites.');
-        break;
-    default:
-        console.log(firstName + ' does something else.');
-}
+// var job = 'instructor';
+// switch (job) {
+//     case 'teacher':
+//     case 'instructor':
+//         console.log(firstName + ' teaches kids how to code.');
+//         break;
+//     case 'driver':
+//         console.log(firstName + ' drives an uber in lisbon.');
+//         break;
+//     case 'designer':
+//         console.log(firstName + ' designs beautiful websites.');
+//         break;
+//     default:
+//         console.log(firstName + ' does something else.');
+// }
 
-switch (true) {
-    case age < 13:
-        console.log(firstName + ' is a boy.');
-        break;
-    case age >= 13 && age < 20:
-            console.log(firstName + ' is a teenager.');
-            break;
-    default:
-            console.log(firstName + ' is a man.');
+// switch (true) {
+//     case age < 13:
+//         console.log(firstName + ' is a boy.');
+//         break;
+//     case age >= 13 && age < 20:
+//             console.log(firstName + ' is a teenager.');
+//             break;
+//     default:
+//             console.log(firstName + ' is a man.');
+// }
+
+// ****************
+// truthy and falsy values and equality operators
+
+// falsy values: undefined, null, 0, '', NaN
+// truthy values: NOT falsy values
+
+var height;
+
+
+height = 0;
+if (height || height === 0) {
+    console.log('variable is defined');
+} else {
+    console.log('variable has NOT beeen defined');
 }
