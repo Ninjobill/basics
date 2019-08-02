@@ -114,14 +114,54 @@
 // x++;
 // x--;
 // console.log(x);
-var massMark = 80;
-var heightMark = 2;
-var bmiMark = massMark / (heightMark * heightMark);
-console.log(bmiMark);
 
-var massJohn = 82;
-var heightJohn = 1.8;
-var bmiJohn = massJohn / (heightJohn * heightJohn);
-console.log(bmiJohn);
+// coding challenge 1
+// ********************
+// var massMark = 80;
+// var heightMark = 2;
+// var bmiMark = massMark / (heightMark * heightMark);
+// console.log(bmiMark);
 
-console.log('Is Marks bmi higher than Johns? ' + (bmiMark > bmiJohn))
+// var massJohn = 82;
+// var heightJohn = 1.8;
+// var bmiJohn = massJohn / (heightJohn * heightJohn);
+// console.log(bmiJohn);
+
+// console.log('Is Marks bmi higher than Johns? ' + (bmiMark > bmiJohn))
+
+// if else statements
+// ********************
+
+// var firstName = 'John';
+// var civilStatus = 'single';
+
+// if (civilStatus === 'married') {
+//     console.log(firstName + ' is married!');
+// } else {
+//     console.log(firstName + ' will hopefully marry soon :)');
+// }
+
+// var isMarried = true;
+// if (isMarried) {
+//     console.log(firstName + ' is married!');
+// } else {
+//     console.log(firstName + ' will hopefully marry soon :)');
+// }
+
+// var massMark = 80;
+// var heightMark = 2;
+// var bmiMark = massMark / (heightMark * heightMark);
+// console.log(bmiMark);
+
+// var massJohn = 82;
+// var heightJohn = 1.8;
+// var bmiJohn = massJohn / (heightJohn * heightJohn);
+// console.log(bmiJohn);
+
+// if(bmiMark > bmiJohn) {
+//     console.log('mark\s BMI is higher than John\s');
+// } else {
+//     console.log('John\s BMI is higher than Mark\s');
+// }
+
+// console.log('Is Marks bmi higher than Johns? ' + (bmiMark > bmiJohn))
