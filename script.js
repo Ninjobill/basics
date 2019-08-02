@@ -227,12 +227,41 @@ var age = 20;
 // falsy values: undefined, null, 0, '', NaN
 // truthy values: NOT falsy values
 
-var height;
+// var height;
 
 
-height = 0;
-if (height || height === 0) {
-    console.log('variable is defined');
+// height = 0;
+// if (height || height === 0) {
+//     console.log('variable is defined');
+// } else {
+//     console.log('variable has NOT beeen defined');
+// }
+
+var johnTeamScores = 89 + 120 + 127;
+var mikeTeamScores = 116 + 94 + 126;
+var maryTeamScores = 97 + 134 + 105;
+
+var johnTeamAVG = johnTeamScores / 3;
+console.log(johnTeamAVG);
+var mikeTeamAVG = mikeTeamScores / 3;
+console.log(mikeTeamAVG);
+var maryTeamAVG = maryTeamScores / 3;
+console.log(maryTeamAVG);
+
+if(johnTeamAVG > mikeTeamAVG && johnTeamAVG > maryTeamAVG) {
+    console.log('John\'s team AVG is better at ' + johnTeamAVG);
+} else if (mikeTeamAVG > johnTeamAVG && mikeTeamAVG > maryTeamAVG) {
+    console.log('Mike\'s team AVG is better at ' + mikeTeamAVG);
+} else if (maryTeamAVG > mikeTeamAVG && maryTeamAVG > johnTeamAVG) {
+    console.log('Mary\'s team AVG is better at ' + maryTeamAVG);
 } else {
-    console.log('variable has NOT beeen defined');
-}
+    if(maryTeamAVG === mikeTeamAVG && maryTeamAVG === johnTeamAVG && mikeTeamAVG === johnTeamAVG) {
+        console.log('3 way tie!');
+    } else if(maryTeamAVG === mikeTeamAVG) {
+        console.log('marys and mikes team tied');
+    } else if (maryTeamAVG === johnTeamAVG) {
+        console.log('marys and johns team tied');
+    } else {
+        console.log('johns and mikes team tied');
+    }
+} 
