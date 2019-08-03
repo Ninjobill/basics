@@ -237,31 +237,59 @@ var age = 20;
 //     console.log('variable has NOT beeen defined');
 // }
 
-var johnTeamScores = 89 + 120 + 127;
-var mikeTeamScores = 116 + 94 + 126;
-var maryTeamScores = 97 + 134 + 105;
+// var johnTeamScores = 89 + 120 + 127;
+// var mikeTeamScores = 116 + 94 + 126;
+// var maryTeamScores = 97 + 134 + 105;
 
-var johnTeamAVG = johnTeamScores / 3;
-console.log(johnTeamAVG);
-var mikeTeamAVG = mikeTeamScores / 3;
-console.log(mikeTeamAVG);
-var maryTeamAVG = maryTeamScores / 3;
-console.log(maryTeamAVG);
+// var johnTeamAVG = johnTeamScores / 3;
+// console.log(johnTeamAVG);
+// var mikeTeamAVG = mikeTeamScores / 3;
+// console.log(mikeTeamAVG);
+// var maryTeamAVG = maryTeamScores / 3;
+// console.log(maryTeamAVG);
 
-if(johnTeamAVG > mikeTeamAVG && johnTeamAVG > maryTeamAVG) {
-    console.log('John\'s team AVG is better at ' + johnTeamAVG);
-} else if (mikeTeamAVG > johnTeamAVG && mikeTeamAVG > maryTeamAVG) {
-    console.log('Mike\'s team AVG is better at ' + mikeTeamAVG);
-} else if (maryTeamAVG > mikeTeamAVG && maryTeamAVG > johnTeamAVG) {
-    console.log('Mary\'s team AVG is better at ' + maryTeamAVG);
-} else {
-    if(maryTeamAVG === mikeTeamAVG && maryTeamAVG === johnTeamAVG && mikeTeamAVG === johnTeamAVG) {
-        console.log('3 way tie!');
-    } else if(maryTeamAVG === mikeTeamAVG) {
-        console.log('marys and mikes team tied');
-    } else if (maryTeamAVG === johnTeamAVG) {
-        console.log('marys and johns team tied');
+// if(johnTeamAVG > mikeTeamAVG && johnTeamAVG > maryTeamAVG) {
+//     console.log('John\'s team AVG is better at ' + johnTeamAVG);
+// } else if (mikeTeamAVG > johnTeamAVG && mikeTeamAVG > maryTeamAVG) {
+//     console.log('Mike\'s team AVG is better at ' + mikeTeamAVG);
+// } else if (maryTeamAVG > mikeTeamAVG && maryTeamAVG > johnTeamAVG) {
+//     console.log('Mary\'s team AVG is better at ' + maryTeamAVG);
+// } else {
+//     if(maryTeamAVG === mikeTeamAVG && maryTeamAVG === johnTeamAVG && mikeTeamAVG === johnTeamAVG) {
+//         console.log('3 way tie!');
+//     } else if(maryTeamAVG === mikeTeamAVG) {
+//         console.log('marys and mikes team tied');
+//     } else if (maryTeamAVG === johnTeamAVG) {
+//         console.log('marys and johns team tied');
+//     } else {
+//         console.log('johns and mikes team tied');
+//     }
+// } 
+
+// ********************
+// Functions
+
+function calculateAge(birthYear) {
+    return 2018 - birthYear;
+}
+
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1948);
+var ageJane = calculateAge(1969);
+console.log(ageJohn, ageMike, ageJane);
+
+function yearsUntilRetirement(year, firstName) {
+    var age = calculateAge(year);
+    var retirement = 65-age;
+
+    if (retirement > 0) {
+        console.log(firstName + ' retires in ' + retirement + ' years.');
     } else {
-        console.log('johns and mikes team tied');
+        console.log(firstName + ' is already retired');
     }
-} 
+}
+
+yearsUntilRetirement(1990, 'John');
+yearsUntilRetirement(1948, 'Mike');
+yearsUntilRetirement(1969, 'Jane');
+
