@@ -406,3 +406,41 @@ var age = 20;
 //                     bills[2] + tips[2]]
 
 // console.log(tips, finalValues);
+
+// ***************
+// Objects and Properties
+
+// array order matters objects do not
+
+// Object literal
+var john = {
+    firstName: 'john',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['jane', 'mark', 'bob', 'emily'],
+    job: 'teacher',
+    isMarried: false
+};
+
+console.log(john.firstName);
+console.log(john['lastName']);
+var x = 'birthYear';
+
+console.log(john[x]);
+
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john);
+
+// new Object syntax
+var jane = new Object();
+jane.firstName = 'jane';
+jane.birthYear = 1969;
+jane['lastName'] = 'Smith';
+console.log(jane);
+
+var myCar = new Object();
+myCar.make = 'ford';
+myCar.model = 'mustang';
+
+console.log(myCar);
