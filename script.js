@@ -323,31 +323,86 @@ var age = 20;
 // arrays
 
 // initialize new array
-var names = ['John', 'Mark', 'Jane'];
-var years = new Array(1990, 1969, 1948);
+// var names = ['John', 'Mark', 'Jane'];
+// var years = new Array(1990, 1969, 1948);
 
-console.log(names[0]);
-console.log(years);
+// console.log(names[0]);
+// console.log(years);
 
-// mutate array data
-names[1]= 'Ben';
-names[names.length] = 'Mary';
-console.log(names);
+// // mutate array data
+// names[1]= 'Ben';
+// names[names.length] = 'Mary';
+// console.log(names);
 
-// different data types
-var john = ['john', 'smith', 1990, 'designer', false];
+// // different data types
+// var john = ['john', 'smith', 1990, 'designer', false];
 
-john.push('blue');
-john.unshift('MR.');
-console.log(john);
+// john.push('blue');
+// john.unshift('MR.');
+// console.log(john);
 
-john.pop();
-john.pop();
-john.shift();
-console.log(john);
+// john.pop();
+// john.pop();
+// john.shift();
+// console.log(john);
 
-console.log(john.indexOf(1990));
+// console.log(john.indexOf(1990));
 
-var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
-console.log(isDesigner);
+// var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+// console.log(isDesigner);
 
+// var bill1 = 124;
+// var bill2 = 48;
+// var bill3 = 268;
+// var tips = [];
+// var billTotals = [];
+
+// function tipCalculator(bill) {
+//     switch(bill) {
+//         case (bill < 50):
+//             var tip = bill * .2;
+//             tips.push(tip);
+//             var total = tip + bill;
+//             billTotals.push(total);
+//         case (bill > 50 && bill < 200):
+//             var tip = bill * .15;
+//             tips.push(tip);
+//             var total = tip + bill;
+//             billTotals.push(total);
+//         default:
+//             var tip = bill * .1;
+//             tips.push(tip);
+//             var total = tip + bill;
+//             billTotals.push(total);
+//     }
+// }
+
+// tipCalculator(bill1);
+// tipCalculator(bill2);
+// tipCalculator(bill3);
+
+// console.log(tips);
+// console.log(billTotals)
+
+// function tipCalculator(bill) {
+//     var percentage;
+//     if (bill < 50) {
+//         percentage = .2;
+//     } else if (bill >= 50 && bill < 200) {
+//         percentage = .15;
+//     } else {
+//         percentage = .1;
+//     }
+//     return percentage * bill;
+// }
+
+// var bills = [ 124, 48, 268];
+// var tips = [tipCalculator(bills[0]),
+//             tipCalculator(bills[1]),
+//             tipCalculator(bills[2])];
+
+// var finalValues = [bills[0] + tips[0],
+//                     bills[1] + tips[1],
+//                     bills[2] + tips[2]]
+
+// console.log(tips, finalValues);
