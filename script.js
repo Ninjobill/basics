@@ -465,38 +465,146 @@
 
 // console.log(john);
 
+// var john = {
+//     fullName: 'John Smith',
+//     mass: 80,
+//     height: 2,
+//     findBMI: function() {
+//         this.bmi = this.mass / (this.height * this.height);
+//         return this.bmi;
+//     }
+// };
+// var mark = {
+//     fullName: 'Mark Mark',
+//     mass: 60,
+//     height: 1.68,
+//     findBMI: function() {
+//         this.bmi = this.mass / (this.height * this.height);
+//         return this.bmi;
+//     }
+// };
+
+// john.findBMI();
+// mark.findBMI();
+
+// console.log(john);
+// console.log(mark);
+
+// if(john.bmi > mark.bmi) {
+//     console.log(john.fullName + ' has a higher BMI with ' + john.bmi);
+// } else if (john.bmi < mark.bmi) {
+//     console.log(mark.fullName + ' has a higher BMI with ' + mark.bmi);
+// } else {
+//     console.log('They have the same BMI!');
+// }
+
+
+// ****************
+// loops and iteration
+
+// for loop
+// for(var i = 1; i <= 20; i+=2) {
+//     console.log(i);
+// }
+
+// var john = ['john', 'smith', 1990, 'designer', false, 'blue'];
+// // for loop
+// for (var i = 0; i < john.length; i++) {
+//     console.log(john[i]);
+// }
+
+// // While loops
+// var i = 0;
+// while(i < john.length) {
+//     console.log(john[i]);
+//     i++;
+// }
+
+
+// continue and break statements
+// var john = ['john', 'smith', 1990, 'designer', false, 'blue'];
+// for (var i = 0; i < john.length; i++) {
+//     if (typeof john[i] !== 'string') continue;
+//     console.log(john[i]);
+// }
+
+// for (var i = 0; i < john.length; i++) {
+//     if (typeof john[i] !== 'string') break;
+//     console.log(john[i]);
+// }
+
+// // looping backwards
+// for (var i = john.length -1; i >= 0; i--) {
+//     console.log(john[i]);
+// }
+
+// **************
+// Coding Challenge 5
+
+
 var john = {
-    fullName: 'John Smith',
-    mass: 80,
-    height: 2,
-    findBMI: function() {
-        this.bmi = this.mass / (this.height * this.height);
-        return this.bmi;
+    name: 'john',
+    bills: [124, 48, 268, 180, 42],
+    tips: [],
+    totals: [],
+    tipCalculator: function(bills) {
+        for(var i = 0; i < bills.length; i++) {
+            var percentage;
+            if (bills[i] < 50) {
+                percentage = .2;
+            } else if (bills[i] >= 50 && bills[i] < 200) {
+                percentage = .15;
+            } else {
+                percentage = .1;
+            }
+            var tip = percentage * bills[i];
+            this.tips.push(tip);
+            this.totals.push(tip + bills[i]);
+        }
     }
-};
-var mark = {
-    fullName: 'Mark Mark',
-    mass: 60,
-    height: 1.68,
-    findBMI: function() {
-        this.bmi = this.mass / (this.height * this.height);
-        return this.bmi;
-    }
-};
-
-john.findBMI();
-mark.findBMI();
-
-console.log(john);
-console.log(mark);
-
-if(john.bmi > mark.bmi) {
-    console.log(john.fullName + ' has a higher BMI with ' + john.bmi);
-} else if (john.bmi < mark.bmi) {
-    console.log(mark.fullName + ' has a higher BMI with ' + mark.bmi);
-} else {
-    console.log('They have the same BMI!');
 }
 
+var mark = {
+    name: 'mark',
+    bills: [77, 375, 110, 45],
+    tips: [],
+    totals: [],
+    tipCalculator: function(bills) {
+        for(var i = 0; i < bills.length; i++) {
+            var percentage;
+            if (bills[i] < 100) {
+                percentage = .2;
+            } else if (bills[i] > 100 && bills[i] < 300) {
+                percentage = .1;
+            } else {
+                percentage = .25;
+            }
+            var tip = percentage * bills[i];
+            this.tips.push(tip);
+            this.totals.push(tip + bills[i]);
+        }
+    }
+}
 
+john.tipCalculator(john.bills);
+mark.tipCalculator(mark.bills);
 
+function tipAvg(tip) {
+    tipTotal = 0;
+    for(var i = 0; i < tip.length; i++) {
+        tipTotal += tip[i];
+    }
+    var average = tipTotal / tip.length;
+    return average;
+}
+
+console.log(tipAvg(john.tips));
+console.log(tipAvg(mark.tips));
+
+if(tipAvg(john.tips) > tipAvg(mark.tips)) {
+    console.log('Johns family has the highest tips at an average of $' + Math.floor(tipAvg(john.tips)));
+} else if (tipAvg(john.tips) < tipAvg(mark.tips)) {
+    console.log('Marks family has the highest tips at an average of $' + Math.floor(tipAvg(mark.tips)));
+} else {
+    console.log('They both tip the same!');
+}
