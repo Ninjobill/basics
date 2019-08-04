@@ -413,34 +413,54 @@ var age = 20;
 // array order matters objects do not
 
 // Object literal
+// var john = {
+//     firstName: 'john',
+//     lastName: 'Smith',
+//     birthYear: 1990,
+//     family: ['jane', 'mark', 'bob', 'emily'],
+//     job: 'teacher',
+//     isMarried: false
+// };
+
+// console.log(john.firstName);
+// console.log(john['lastName']);
+// var x = 'birthYear';
+
+// console.log(john[x]);
+
+// john.job = 'designer';
+// john['isMarried'] = true;
+// console.log(john);
+
+// // new Object syntax
+// var jane = new Object();
+// jane.firstName = 'jane';
+// jane.birthYear = 1969;
+// jane['lastName'] = 'Smith';
+// console.log(jane);
+
+// var myCar = new Object();
+// myCar.make = 'ford';
+// myCar.model = 'mustang';
+
+// console.log(myCar);
+
+// **************************
+// Objects and methods
+
+
 var john = {
     firstName: 'john',
     lastName: 'Smith',
     birthYear: 1990,
     family: ['jane', 'mark', 'bob', 'emily'],
     job: 'teacher',
-    isMarried: false
+    isMarried: false,
+    calcAge: function(birthYear) {
+        this.age = 2018 - this.birthYear;
+    }
 };
 
-console.log(john.firstName);
-console.log(john['lastName']);
-var x = 'birthYear';
+john.calcAge();
 
-console.log(john[x]);
-
-john.job = 'designer';
-john['isMarried'] = true;
 console.log(john);
-
-// new Object syntax
-var jane = new Object();
-jane.firstName = 'jane';
-jane.birthYear = 1969;
-jane['lastName'] = 'Smith';
-console.log(jane);
-
-var myCar = new Object();
-myCar.make = 'ford';
-myCar.model = 'mustang';
-
-console.log(myCar);
