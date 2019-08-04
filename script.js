@@ -183,8 +183,8 @@
 // *******************
 // the Ternary Operator and Switch Statements
 
-var firstName = 'John';
-var age = 20;
+// var firstName = 'John';
+// var age = 20;
 
 // age >= 18 ? console.log(firstName + ' drinks beer.') 
 // : console.log(firstName + ' drinks juice.')
@@ -449,18 +449,54 @@ var age = 20;
 // Objects and methods
 
 
+// var john = {
+//     firstName: 'john',
+//     lastName: 'Smith',
+//     birthYear: 1990,
+//     family: ['jane', 'mark', 'bob', 'emily'],
+//     job: 'teacher',
+//     isMarried: false,
+//     calcAge: function(birthYear) {
+//         this.age = 2018 - this.birthYear;
+//     }
+// };
+
+// john.calcAge();
+
+// console.log(john);
+
 var john = {
-    firstName: 'john',
-    lastName: 'Smith',
-    birthYear: 1990,
-    family: ['jane', 'mark', 'bob', 'emily'],
-    job: 'teacher',
-    isMarried: false,
-    calcAge: function(birthYear) {
-        this.age = 2018 - this.birthYear;
+    fullName: 'John Smith',
+    mass: 80,
+    height: 2,
+    findBMI: function() {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+};
+var mark = {
+    fullName: 'Mark Mark',
+    mass: 60,
+    height: 1.68,
+    findBMI: function() {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
     }
 };
 
-john.calcAge();
+john.findBMI();
+mark.findBMI();
 
 console.log(john);
+console.log(mark);
+
+if(john.bmi > mark.bmi) {
+    console.log(john.fullName + ' has a higher BMI with ' + john.bmi);
+} else if (john.bmi < mark.bmi) {
+    console.log(mark.fullName + ' has a higher BMI with ' + mark.bmi);
+} else {
+    console.log('They have the same BMI!');
+}
+
+
+
