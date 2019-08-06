@@ -542,69 +542,69 @@
 // Coding Challenge 5
 
 
-var john = {
-    name: 'john',
-    bills: [124, 48, 268, 180, 42],
-    tips: [],
-    totals: [],
-    tipCalculator: function(bills) {
-        for(var i = 0; i < bills.length; i++) {
-            var percentage;
-            if (bills[i] < 50) {
-                percentage = .2;
-            } else if (bills[i] >= 50 && bills[i] < 200) {
-                percentage = .15;
-            } else {
-                percentage = .1;
-            }
-            var tip = percentage * bills[i];
-            this.tips.push(tip);
-            this.totals.push(tip + bills[i]);
-        }
-    }
-}
+// var john = {
+//     name: 'john',
+//     bills: [124, 48, 268, 180, 42],
+//     tips: [],
+//     totals: [],
+//     tipCalculator: function(bills) {
+//         for(var i = 0; i < bills.length; i++) {
+//             var percentage;
+//             if (bills[i] < 50) {
+//                 percentage = .2;
+//             } else if (bills[i] >= 50 && bills[i] < 200) {
+//                 percentage = .15;
+//             } else {
+//                 percentage = .1;
+//             }
+//             var tip = percentage * bills[i];
+//             this.tips.push(tip);
+//             this.totals.push(tip + bills[i]);
+//         }
+//     }
+// }
 
-var mark = {
-    name: 'mark',
-    bills: [77, 375, 110, 45],
-    tips: [],
-    totals: [],
-    tipCalculator: function(bills) {
-        for(var i = 0; i < bills.length; i++) {
-            var percentage;
-            if (bills[i] < 100) {
-                percentage = .2;
-            } else if (bills[i] > 100 && bills[i] < 300) {
-                percentage = .1;
-            } else {
-                percentage = .25;
-            }
-            var tip = percentage * bills[i];
-            this.tips.push(tip);
-            this.totals.push(tip + bills[i]);
-        }
-    }
-}
+// var mark = {
+//     name: 'mark',
+//     bills: [77, 375, 110, 45],
+//     tips: [],
+//     totals: [],
+//     tipCalculator: function(bills) {
+//         for(var i = 0; i < bills.length; i++) {
+//             var percentage;
+//             if (bills[i] < 100) {
+//                 percentage = .2;
+//             } else if (bills[i] > 100 && bills[i] < 300) {
+//                 percentage = .1;
+//             } else {
+//                 percentage = .25;
+//             }
+//             var tip = percentage * bills[i];
+//             this.tips.push(tip);
+//             this.totals.push(tip + bills[i]);
+//         }
+//     }
+// }
 
-john.tipCalculator(john.bills);
-mark.tipCalculator(mark.bills);
+// john.tipCalculator(john.bills);
+// mark.tipCalculator(mark.bills);
 
-function tipAvg(tip) {
-    tipTotal = 0;
-    for(var i = 0; i < tip.length; i++) {
-        tipTotal += tip[i];
-    }
-    var average = tipTotal / tip.length;
-    return average;
-}
+// function tipAvg(tip) {
+//     tipTotal = 0;
+//     for(var i = 0; i < tip.length; i++) {
+//         tipTotal += tip[i];
+//     }
+//     var average = tipTotal / tip.length;
+//     return average;
+// }
 
-console.log(tipAvg(john.tips));
-console.log(tipAvg(mark.tips));
+// console.log(tipAvg(john.tips));
+// console.log(tipAvg(mark.tips));
 
-if(tipAvg(john.tips) > tipAvg(mark.tips)) {
-    console.log('Johns family has the highest tips at an average of $' + Math.floor(tipAvg(john.tips)));
-} else if (tipAvg(john.tips) < tipAvg(mark.tips)) {
-    console.log('Marks family has the highest tips at an average of $' + Math.floor(tipAvg(mark.tips)));
-} else {
-    console.log('They both tip the same!');
-}
+// if(tipAvg(john.tips) > tipAvg(mark.tips)) {
+//     console.log('Johns family has the highest tips at an average of $' + Math.floor(tipAvg(john.tips)));
+// } else if (tipAvg(john.tips) < tipAvg(mark.tips)) {
+//     console.log('Marks family has the highest tips at an average of $' + Math.floor(tipAvg(mark.tips)));
+// } else {
+//     console.log('They both tip the same!');
+// }
